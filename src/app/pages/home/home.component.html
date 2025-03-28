@@ -1,14 +1,16 @@
 
 <div class="md:mx-[10%]">
     <app-ad-banner></app-ad-banner>
-    <div class="m-5">
-        <h1 class="text-2xl">¿Qué hay de nuevo?</h1>
-    </div>
+   
     
     <div class="flex flex-col md:flex-row">
-    
+      
         <div class="lista-novedades  overflow-auto md:w-[65%]">
-            <app-post *ngFor="let item of items | paginate: { itemsPerPage: 10, currentPage: page }"></app-post>
+            <div class="m-5">
+                <h1 class="text-2xl">¿Qué hay de nuevo?</h1>
+            </div>
+            
+            <app-post [tipoPost]="tipo" *ngFor="let item of items | paginate: { itemsPerPage: 10, currentPage: page }"></app-post>
         
             
             <div class="w-full flex justify-center">

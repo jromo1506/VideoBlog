@@ -16,4 +16,6 @@ export class HomeComponent {
   items = ["","","","","","","","","","","",""];
   page = 1;
 
+  tipo:string="1";
+
 }

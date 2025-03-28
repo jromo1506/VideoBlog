@@ -1,38 +1,140 @@
-<div class="flex m-5 p-3 bg-stone-900 border-2 border-red-600">
-    <div class="flex-1">
-        <img  class="w-[40px] rounded-full" src="../../../assets/icons/user-default.png">
+
+
+
+
+<div [ngSwitch]="tipoPost">
+    <ng-container *ngSwitchCase="'1'">
+        <ng-container *ngTemplateOutlet="plantillaDefault"></ng-container>
+    </ng-container>
+    <ng-container *ngSwitchCase="'2'">
+        <ng-container *ngTemplateOutlet="plantillaTendencias"></ng-container>
+    </ng-container>
+
+</div>
+
+
+<!-- Plantilla para los post normales -->
+<ng-template #plantillaDefault>
+    <div class="flex m-2 p-3 bg-stone-900 border border-red-600">
+        <div class="flex-1 flex justify-center ">
+            <img  class="w-[2rem] h-[2rem] rounded-full" src="../../../assets/icons/user-default.png">
+        </div>
+
+        <!-- Que esto se muestre si esta en modo movil -->
+        <div class="w-[90%] md:w-[96%] md:hidden">
+            <div >
+                <div >
+                    
+                    <p class="text-xs"> <span class="text-red-500">Tags del post</span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, odio.</p>
+                </div>
+            </div>
+    
+            <div class="flex text-xs">
+                <div class="">
+                    Usuario
+                </div>
+                <div class="ml-3">
+                    06/08/24
+                </div>
+                <div class="ml-3">
+                    Categoria
+                </div>
+            </div>
+    
+            <div class="flex text-xs ">
+                <div class="text-gray-300">
+                    Vistas 9999
+                </div>
+            </div>
+            <div class="flex text-xs">
+                <div class="text-gray-300">
+                    Respuestas 90k
+                </div>
+            </div>
+            
+        
+        </div>
+
+
+        <!-- Quiero hacer que esto solo se muestre si  esta en modo pc -->
+        
+        <div class="w-[60%] md:w-[72%]  hidden md:block">
+            <div >
+                <div >
+                    
+                    <p class="text-xs"> <span class="text-red-500">Tags del post</span> Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+            </div>
+    
+            <div class="flex text-[0.6rem]">
+                <div class="">
+                    Usuario
+                </div>
+          
+            </div>
+
+
+            <div class="flex text-[0.6rem] mt-1 justify-between">
+                <div class="">
+                    06/08/24
+                </div>
+                <div class="">
+                    Categoria
+                </div>
+            </div>
+    
+         
+            
+        
+        </div>
+
+        
+
+        <div class="w-[20%] md:w-[23%] hidden md:flex justify-end">
+            <div>
+                <div class="flex text-[0.6rem] ">
+                    <div class="text-gray-300">
+                        <i class="fa-solid fa-eye"></i> Vistas 9999
+                    </div>
+                </div>
+                <div class="flex text-[0.6rem]">
+                    <div class="text-gray-300">
+                        <i class="fa-solid fa-reply"></i> Respuestas 90k
+                    </div>
+                </div>
+            </div>
+          
+        </div>
     </div>
-    <div class="w-[90%] md:w-[97%]">
+</ng-template>
+
+
+<!-- Plantilla para los post de tendencias -->
+<ng-template #plantillaTendencias>
+    <div class="flex m-5 p-3 bg-stone-900 border border-stone-600">
+
         <div >
             <div >
-                
-                <p class="text-xs"> <span class="text-red-500">Tags del post</span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, odio.</p>
+                <div >
+                    
+                    <p class="text-xs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, odio.</p>
+                </div>
             </div>
-        </div>
-
-        <div class="flex text-xs">
-            <div class="">
-                Usuario
-            </div>
-            <div class="ml-3">
-                06/08/24
-            </div>
-            <div class="ml-3">
-                Categoria
-            </div>
-        </div>
-
-        <div class="flex text-xs ">
-            <div class="text-gray-300">
-                Vistas 9999
-            </div>
-        </div>
-        <div class="flex text-xs">
-            <div class="text-gray-300">
-                Respuestas 90k
-            </div>
-        </div>
-        
     
+      
+    
+            <div class="flex text-[.6rem]">
+                <div class="text-gray-300">
+                    Vistas 9999
+                </div>
+            </div>
+            <div class="flex text-[.6rem]">
+                <div class="text-gray-300">
+                    Respuestas 90k
+                </div>
+            </div>
+            
+        
+        </div>
     </div>
-</div>
+</ng-template>

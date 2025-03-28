@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,5 +9,16 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent {
+
+  @Input() postData:any;
+  @Input() tipoPost:string="";
+
+  constructor(){
+
+  }
+
+  ngOnInit(){
+    console.log(this.tipoPost);
+  }
 
 }
