@@ -26,4 +26,9 @@ export class LoginComponent {
         console.log(this.login.value);
       }
     }
+
+
+    calcular(){
+     
+    }
 }

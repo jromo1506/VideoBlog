@@ -1,23 +1,28 @@
-<div class="text-xl border-2 border-red-950 mx-2 mt-5  p-3 rounded-md bg-white h-[100px]">
-   
+
+<div class="md:mx-[10%]">
+    <app-ad-banner></app-ad-banner>
+    <div class="m-5">
+        <h1 class="text-2xl">¿Qué hay de nuevo?</h1>
+    </div>
+    
+    <div class="flex flex-col md:flex-row">
+    
+        <div class="lista-novedades  overflow-auto md:w-[65%]">
+            <app-post *ngFor="let item of items | paginate: { itemsPerPage: 10, currentPage: page }"></app-post>
+        
+            
+            <div class="w-full flex justify-center">
+                <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    
+            </div>
+        </div>
+        
+        <div class="md:flex-1">
+            <app-populares></app-populares>
+        </div>
+    </div>
+
+    <app-ad-banner></app-ad-banner>
 </div>
 
-<div class="m-5">
-    <h1 class="text-2xl">¿Qué hay de nuevo?</h1>
-</div>
-
-
-<div class="lista-novedades  overflow-auto">
-    <app-post *ngFor="let item of items | paginate: { itemsPerPage: 10, currentPage: page }"></app-post>
-
-</div>
-<div class="w-full flex justify-center">
-    <pagination-controls (pageChange)="page = $event"></pagination-controls>
-
-</div>
-
-
-<div class="text-xl border-2 border-red-950 mx-2 mt-5  p-3 rounded-md bg-white h-[100px]">
-   
-</div>
 
