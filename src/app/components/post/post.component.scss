@@ -1,0 +1,22 @@
+[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: rgb(219, 220, 181);
+    color: rgb(0, 0, 0);
+    padding: 0.1rem;
+    font-weight: 100;
+  
+    white-space: nowrap;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0.2rem;
+    font-size: 0.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  [data-tooltip] {
+    position: relative;
+    transition: all ease 0.3s;
+    
+  }

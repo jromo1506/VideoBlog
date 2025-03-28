@@ -15,9 +15,9 @@
 
 <!-- Plantilla para los post normales -->
 <ng-template #plantillaDefault>
-    <div class="flex m-2 p-3 bg-stone-900 border border-red-600">
-        <div class="flex-1 flex justify-center ">
-            <img  class="w-[2rem] h-[2rem] rounded-full" src="../../../assets/icons/user-default.png">
+    <div class="flex m-2 p-3 bg-stone-900 border border-neutral-600 hover:bg-stone-600 hover:cursor-pointer">
+        <div class="flex-1 min-w-[1.7rem] flex justify-center ">
+            <img  class="w-[1.7rem] h-[1.7rem] rounded-full " src="../../../assets/icons/user-default.png">
         </div>
 
         <!-- Que esto se muestre si esta en modo movil -->
@@ -58,7 +58,7 @@
 
         <!-- Quiero hacer que esto solo se muestre si  esta en modo pc -->
         
-        <div class="w-[60%] md:w-[72%]  hidden md:block">
+        <div class="w-[40%] md:w-[51%]  hidden md:block">
             <div >
                 <div >
                     
@@ -74,19 +74,35 @@
             </div>
 
 
-            <div class="flex text-[0.6rem] mt-1 justify-between">
-                <div class="">
-                    06/08/24
+            <div class="flex  justify-between">
+                <div class="text-[0.4rem]">
+                    Publicado: 06/08/24
                 </div>
-                <div class="">
-                    Categoria
-                </div>
+               
             </div>
     
          
             
         
         </div>
+        
+        <div class="w-[20%] md:w-[23%] hidden md:flex justify-end">
+            <div>
+                <div class="flex text-[0.6rem] ">
+                    <div class="text-gray-300">
+                        Categoria:
+                    </div>
+                </div>
+                <div class="flex text-[0.6rem]">
+                    <div class="text-gray-300">
+                        Videos Gore
+                    </div>
+                </div>
+
+            </div>
+          
+        </div>
+    
 
         
 
@@ -102,6 +118,12 @@
                         <i class="fa-solid fa-reply"></i> Respuestas 90k
                     </div>
                 </div>
+                
+                <div class="mt-1 flex justify-start text-[0.6rem]">
+                    <i class="mx-1 fa-solid fa-heart hover:text-red-600" data-tooltip="Like"></i>123
+                    <i class="mx-1 fa-solid fa-star hover:text-red-600" data-tooltip="Favoritos"></i>123
+                    
+                </div>
             </div>
           
         </div>
@@ -111,7 +133,7 @@
 
 <!-- Plantilla para los post de tendencias -->
 <ng-template #plantillaTendencias>
-    <div class="flex m-5 p-3 bg-stone-900 border border-stone-600">
+    <div class="flex m-1 p-2 bg-stone-900 border border-stone-600">
 
         <div >
             <div >
@@ -123,14 +145,14 @@
     
       
     
-            <div class="flex text-[.6rem]">
+            <div class="flex text-[.5rem]">
                 <div class="text-gray-300">
-                    Vistas 9999
+                    <i class="fa-solid fa-eye"></i> Vistas 9999
                 </div>
             </div>
             <div class="flex text-[.6rem]">
                 <div class="text-gray-300">
-                    Respuestas 90k
+                    <i class="fa-solid fa-reply"></i> Respuestas 90k
                 </div>
             </div>
             
