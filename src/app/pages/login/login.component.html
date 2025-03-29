@@ -1,4 +1,4 @@
-<div class="flex justify-center items-center h-screen">
+<div class="flex justify-center items-center h-screen flex-col">
     <form [formGroup]="login" (ngSubmit)="submit()" class="w-full max-w-sm flex flex-col space-y-4">
         <div>
             <label>
@@ -14,5 +14,13 @@
        </div>
         
         <button type="submit" [disabled]="login.invalid" class="bg-blue-500 text-white p-2">Submit</button>
+       
     </form>
+    <div class="flex flex-col  text-xs text-center mt-4">
+        <p>¿Olvidaste tu contraseña?</p>
+        <p>Registrarse</p>
+    </div>
+
+    
+  
 </div>
