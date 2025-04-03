@@ -9,6 +9,9 @@
     <ng-container *ngSwitchCase="'2'">
         <ng-container *ngTemplateOutlet="plantillaTendencias"></ng-container>
     </ng-container>
+    <ng-container *ngSwitchCase="'3'">
+        <ng-container *ngTemplateOutlet="plantillaCategorias"></ng-container>
+    </ng-container>
 
 </div>
 
@@ -20,7 +23,7 @@
             <img  class="w-[1.7rem] h-[1.7rem] rounded-full " src="../../../assets/icons/user-default.png">
         </div>
 
-        <!-- Que esto se muestre si esta en modo movil -->
+        <!-- modo movil -->
         <div class="w-[90%] md:w-[96%] md:hidden">
             <div >
                 <div >
@@ -56,7 +59,7 @@
         </div>
 
 
-        <!-- Quiero hacer que esto solo se muestre si  esta en modo pc -->
+        <!-- modo pc -->
         
         <div class="w-[40%] md:w-[51%]  hidden md:block">
             <div >
@@ -160,3 +163,114 @@
         </div>
     </div>
 </ng-template>
+
+<!-- Plantilla para los posts de categorias -->
+ <ng-template #plantillaCategorias>
+    <div class="flex m-2 p-3 bg-stone-900 border border-neutral-600 hover:bg-stone-600 hover:cursor-pointer" (click)="navegarPost()">
+        <div class=" min-w-[2.5rem] flex justify-center items-center">
+            <img  class="w-[2.5rem] h-[2.5rem] rounded-full " src="../../../assets/icons/user-default.png">
+        </div>
+
+        <!-- modo movil -->
+        <div class="w-[90%] md:w-[90%] md:hidden">
+            <div >
+                <div >
+                    
+                    <p class="text-xs"> <span class="text-red-500">Tags del post</span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, odio.</p>
+                </div>
+            </div>
+    
+            <div class="flex text-xs">
+                <div class="">
+                    Usuario
+                </div>
+                <div class="ml-3">
+                    06/08/24
+                </div>
+                <div class="ml-3">
+                    Categoria
+                </div>
+            </div>
+    
+            <div class="flex text-xs ">
+                <div class="text-gray-300">
+                    Vistas 9999
+                </div>
+            </div>
+            <div class="flex text-xs">
+                <div class="text-gray-300">
+                    Respuestas 90k
+                </div>
+            </div>
+            
+        
+        </div>
+
+
+        <!-- modo pc -->
+        
+        <div class="w-[40%] md:w-[51%] p-2  hidden md:block ">
+            <div >
+                <div >
+                    
+                    <p class="text-xs">Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+            </div>
+    
+            <div class="flex text-[0.6rem]">
+                <div class="text-justify truncate">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, est? Architecto sapiente voluptatum, explicabo beatae culpa fuga nemo sint error officiis unde sit. Veritatis ad aliquam doloribus ipsa, delectus voluptatibus dolorum amet possimus, asperiores molestiae obcaecati laudantium esse nobis! Odio, sequi. Veritatis, sequi necessitatibus! Minima molestiae quas dicta illum quisquam?
+                </div>
+          
+            </div>
+
+
+    
+         
+            
+        
+        </div>
+        
+        <div class="w-[20%] md:w-[23%] hidden md:flex justify-end p-2" >
+            <div>
+                <div class="flex text-[0.6rem] ">
+                    <div class="text-gray-300">
+                        Categoria:
+                    </div>
+                </div>
+                <div class="flex text-[0.6rem]">
+                    <div class="text-gray-300">
+                        Videos Gore
+                    </div>
+                </div>
+
+            </div>
+          
+        </div>
+    
+
+        
+
+        <div class="w-[20%] md:w-[23%] hidden md:flex justify-end p-2">
+            <div>
+                <div class="flex text-[0.6rem] ">
+                    <div class="text-gray-300">
+                        <i class="fa-solid fa-eye"></i> Vistas 9999
+                    </div>
+                </div>
+                <div class="flex text-[0.6rem]">
+                    <div class="text-gray-300">
+                        <i class="fa-solid fa-comments"></i> Posts 90k
+                    </div>
+                </div>
+                
+                <!-- <div class="mt-1 flex justify-start text-[0.6rem]">
+                    <i class="mx-1 fa-solid fa-heart hover:text-red-600" data-tooltip="Like"></i>123
+                    <i class="mx-1 fa-solid fa-star hover:text-red-600" data-tooltip="Favoritos"></i>123
+                    
+                </div> -->
+            </div>
+          
+        </div>
+    </div>
+ </ng-template>

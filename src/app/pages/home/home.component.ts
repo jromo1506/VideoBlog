@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { PostComponent } from 'src/app/components/post/post.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PopularesComponent } from 'src/app/components/populares/populares.component';
-import { AdBannerComponent } from 'src/app/components/ad-banner/ad-banner.component';
+import { AdBannerComponent } from 'src/app/components/ads/ad-banner/ad-banner.component';
+
 
 @Component({
   selector: 'app-home',
