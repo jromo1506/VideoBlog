@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import Quill from 'quill';
-
+import  DOMPurify  from 'dompurify';
 @Component({
     selector: 'app-editor',
     imports: [CommonModule],
@@ -30,9 +30,12 @@ export class EditorComponent {
 
 
   submitComment() {
-    if(this.quill){
-      const comment = this.quill.root.innerHTML; // o quill.getText() si solo quieres el texto plano
-      console.log(comment);
-    }
+      if(this.quill) {
+        let comment = this.quill.root.innerHTML;
+        comment = DOMPurify.sanitize(comment); // Sanitiza el contenido
+        console.log(comment);
+      }
   }
+
+  
 }
