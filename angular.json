@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "VideoBlog:build:production"
+              "buildTarget": "VideoBlog:build:production"
             },
             "development": {
-              "browserTarget": "VideoBlog:build:development"
+              "buildTarget": "VideoBlog:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "VideoBlog:build"
+            "buildTarget": "VideoBlog:build"
           }
         },
         "test": {
