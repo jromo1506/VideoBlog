@@ -1,5 +1,10 @@
 <div class="flex justify-center items-center h-screen flex-col" @fadeIn>
-    <form [formGroup]="login" (ngSubmit)="submit()" class="w-full max-w-sm flex flex-col space-y-4">
+
+
+
+
+
+    <form [formGroup]="login" (ngSubmit)="submit()" class="w-full max-w-sm flex flex-col space-y-4" *ngIf="switchForms">
         <div>
             <label>
                 Username 
@@ -13,34 +18,42 @@
         </label>
        </div>
         
-        <button type="submit" [disabled]="login.invalid" class="bg-blue-500 text-white p-2">Submit</button>
+        <button type="submit" [disabled]="login.invalid" class="bg-red-600 hover:bg-red-800 hover:cursor-pointer text-white p-2">Submit</button>
        
     </form>
 
 
-    <form [formGroup]="register" (ngSubmit)="registrarUsuario()">
+
+
+    <form [formGroup]="register" (ngSubmit)="registrar()" class="w-full max-w-sm flex flex-col space-y-4" *ngIf="!switchForms">
         <div>
-            <label>
-                <input formControlName="usuario">
+            <label> Username
+            <input  type="text" formControlName="username" class="border p-2 w-full">
             </label>
         </div>
         <div>
             <label>
-                <input formControlName="password">
+                Password
+                <input type="text" formControlName="password" class="border p-2 w-full">
             </label>
         </div>
         <div>
             <label>
-                <input formControlName="repassword">
+                Repeat Password
+                <input type="text" formControlName="repassword" class="border p-2 w-full">
             </label>
         </div>
 
-        <button type="submit">Registrar</button>
+        <button type="submit" [disabled]="register.valid" class="bg-red-600 hover:bg-red-800 hover:cursor-pointer text-white p-2">Submit</button>
     </form>
 
 
-    <div class="flex flex-col  text-xs text-center mt-4">
-        <p>¿Olvidaste tu contraseña?</p>
-        <p>Registrarse</p>
+
+    <div class="flex flex-col  text-xs text-center mt-4 ">
+        <p class="cursor-pointer hover:text-red-600">¿Olvidaste tu contraseña?</p>
+        <ng-container>
+            <p *ngIf="switchForms" (click)="cambiarForm()" class="cursor-pointer hover:text-red-600">Registrarse</p>
+            <p *ngIf="!switchForms" (click)="cambiarForm()" class="cursor-pointer hover:text-red-600">Login</p>
+        </ng-container>
     </div>
 </div>

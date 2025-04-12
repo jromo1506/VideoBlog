@@ -20,17 +20,22 @@ export class LoginComponent {
     login:FormGroup;
     register:FormGroup;
 
+    switchForms:boolean = true;
+
     constructor(private fb:FormBuilder){
       this.login = this.fb.group({
         username:['',[Validators.required]],
         password:['',[Validators.required]]
       });
 
-      this.register =this.fb.group({
-        usernamre:['',Validators.required],
-        password:['',Validators.required],
-        repassword:['',Validators.required]
+
+
+      this.register = this.fb.group({
+        username:['',[Validators.required]],
+        password:['',[Validators.required]],
+        repassword:['',[Validators.required]]
       });
+
 
     }
 
@@ -40,12 +45,16 @@ export class LoginComponent {
       }
     }
 
-
-    registrarUsuario(){
-      if(this.register.valid){
-        if(this.register.get('password')?.value === this.register.get('repassword')?.value){
+    registrar(){
+      if(this.register.valid && (this.register.get("password")?.value === this.register.get("repassword")?.value)){
           console.log(this.register.value);
-        }
       }
     }
+
+
+    cambiarForm(){
+      this.switchForms = !this.switchForms;
+    }
 }
+
+
