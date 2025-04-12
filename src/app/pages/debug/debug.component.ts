@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 import {ReactiveFormsModule, FormGroup,FormBuilder,Validators} from '@angular/forms';
 
 @Component({
-  selector: 'app-debug',
-  standalone: true,
-  imports: [CommonModule,ReactiveFormsModule],
-  templateUrl: './debug.component.html',
-  styleUrls: ['./debug.component.scss']
+    selector: 'app-debug',
+    imports: [CommonModule, ReactiveFormsModule],
+    templateUrl: './debug.component.html',
+    styleUrls: ['./debug.component.scss']
 })
 export class DebugComponent {
   

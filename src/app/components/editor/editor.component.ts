@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 import Quill from 'quill';
 
 @Component({
-  selector: 'app-editor',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './editor.component.html',
-  styleUrls: ['./editor.component.scss']
+    selector: 'app-editor',
+    imports: [CommonModule],
+    templateUrl: './editor.component.html',
+    styleUrls: ['./editor.component.scss']
 })
 export class EditorComponent {
   quill?: Quill;

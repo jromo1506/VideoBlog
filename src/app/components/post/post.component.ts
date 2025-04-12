@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-post',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss']
+    selector: 'app-post',
+    imports: [CommonModule],
+    templateUrl: './post.component.html',
+    styleUrls: ['./post.component.scss']
 })
 export class PostComponent {
 

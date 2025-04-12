@@ -4,17 +4,16 @@ import { ReactiveFormsModule,FormBuilder,FormGroup, Validators } from '@angular/
 import { trigger,animate,transition,style} from '@angular/animations';
 
 @Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [CommonModule,ReactiveFormsModule],
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
-  animations:[trigger('fadeIn',[
-    transition(':enter',[
-      style({opacity:0}),
-      animate('300ms ease-out',style({opacity:1}))
-    ])
-  ])]
+    selector: 'app-login',
+    imports: [CommonModule, ReactiveFormsModule],
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.scss'],
+    animations: [trigger('fadeIn', [
+            transition(':enter', [
+                style({ opacity: 0 }),
+                animate('300ms ease-out', style({ opacity: 1 }))
+            ])
+        ])]
 })
 export class LoginComponent {
     login:FormGroup;
