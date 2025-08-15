@@ -1,1 +1,74 @@
-<p>video works!</p>
+  <div class="mt-5 m-2 border rounded-sm border-stone-700 flex flex-col">
+        <div class="flex p-2 bg-stone-900">
+            <div class="flex justify-center items-center">
+                <img  class="w-[3rem] h-[3rem] rounded-full " src="../../../assets/icons/user-default.png">
+
+            </div>
+            <div  class="mx-3">
+                <p class="text-xl text-red-600">Titulo del post</p>
+                <p>Por: Usuario</p>
+            </div>
+        
+            
+            
+          
+        </div>
+        <div class="border-b border-stone-700">
+            
+        </div>
+
+       
+        <div class="p-4 bg-neutral-900">
+            <!--Seccion likes y dislikes-->
+            <div class="my-5">
+                 <video class="w-full h-[70vh] bg-black"></video>
+            </div>
+             <div class="flex">
+                <div class="mx-2">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    999
+                </div>
+                <div class="mx-2">
+                   
+                     <i class="fa-solid fa-thumbs-down"></i>
+                   999
+                </div>
+                <div class="mx-2">
+                  
+                    <i class="fa-solid fa-eye"></i>
+                     100,000
+                </div>
+                <div class="mx-2">
+                  
+                   <i class="fa-solid fa-message"></i>
+                     9999
+                </div>
+            </div>
+
+
+            <div>
+                <div class="m-1 text-sm">
+                    Fecha de publicacion: 10/07/2000
+                </div>
+            </div>
+
+            <!--Seccion descripcion-->
+            <div class="mt-5">
+                <div class="my-1">
+                    <h3 class="font-bold">Descripcion</h3>
+                </div>
+              
+                <p class="text-sm text-justify">  {{ textoCorto }}
+                   
+                </p>
+                 <button *ngIf="texto.length > limite" (click)="toggleTexto()" class="text-red-500 underline">
+                 {{ mostrarCompleto ? 'Mostrar menos' : 'Mostrar más' }}
+                </button>
+
+            </div>
+           
+            
+        </div>
+       
+       
+    </div>

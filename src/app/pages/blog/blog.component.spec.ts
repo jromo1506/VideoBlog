@@ -20,15 +20,20 @@ describe('BlogComponent', () => {
     expect(component).toBeTruthy();
   });
 
-
+  /*Evalua que el valor de la variable sea 3 */
   it("Post debe ser '3'", () => {
     expect(component.post).toBe("3");
   });
 
+  
+  /*Evalua que se envien datos a traves del input */
   it('Debe renderizar 3 app-posts',() => {
     const post = fixture.debugElement.queryAll(By.css('app-post'));
     expect(post.length).toBe(3);
   });
+
+
+  
 
 
 
